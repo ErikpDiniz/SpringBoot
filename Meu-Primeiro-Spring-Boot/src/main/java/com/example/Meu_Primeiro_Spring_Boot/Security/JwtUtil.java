@@ -2,8 +2,6 @@ package com.example.Meu_Primeiro_Spring_Boot.Security;
 
 import java.util.Date;
 
-import javax.print.DocFlavor.STRING;
-
 import java.security.Key;
 
 import io.jsonwebtoken.JwtException;
