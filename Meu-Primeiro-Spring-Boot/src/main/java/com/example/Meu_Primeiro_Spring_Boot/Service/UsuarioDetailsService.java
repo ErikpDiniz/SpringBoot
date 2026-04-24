@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.Meu_Primeiro_Spring_Boot.model.Usuario;
 import com.example.Meu_Primeiro_Spring_Boot.repository.UsuarioRepository;
+
 @Service
 public class UsuarioDetailsService implements UserDetailsService{
 
@@ -24,9 +25,8 @@ public class UsuarioDetailsService implements UserDetailsService{
 
             return User.builder()
                 .username(usuario.getUsername())
-                .roles("User")
+                .password(usuario.getPassword()) // 👈 corrigido
+                .roles("USER")                   // 👈 corrigido
                 .build();
     }
-
-
 }
